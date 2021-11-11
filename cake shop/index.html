@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fresh Cakes</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+   
+/*Univeral reset of elements and pseudoelements*/
+   *,
+   *::before,
+   *::after{
+  font-family:helvetica, calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/*General styling */
+
+html{
+  font-size: 62.5%;
+  background-image: linear-gradient(  #97ABFF 10%, #123597 100%);
+
+}
+
+/* The overall grid description of page */
+div.main-container{
+  width: 100vw;
+  display:grid;
+  grid-template-rows: 15rem 35vh 15vh 35vh auto;
+  grid-gap: 2rem 0rem;
+  /* border: 2px solid green; */
+}
+
+h2{
+  font-size: 3rem;
+  color: white;
+}
+
+p{
+  font-size: 1.4rem;
+  color: whitesmoke;
+}
+
+button{
+  padding: 0.7rem 1.7rem;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background-color 400ms ease;
+  border: solid 1px grey;
+  outline: none;
+}
+
+button:hover{
+  background-color: #ffc600;
+
+}
+/*general poperties for nav element which contains list items, make this a grid,
+specify 4 separate columns to auto fit items. If I didn't set 4 auto columns, they would line up 1 column underneath in new rows
+margin top of 7vh to always have it a bit off from the top.  */
+ ul.nav{
+  margin-top: 5vh;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.nav__item{
+  background-color: #ffc600;
+  padding: 1.3rem 3rem;
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* the section for the highlight item, and some suggested stuff. Make it a grid with 4 columns, 1st column will be image section */
+section.highlights{
+  display:grid;
+  grid-template-columns: 65vw  20vw;
+  grid-template-areas:
+  "opener  hside-1"
+  "opener  hside-2";
+  grid-gap: 2rem;
+  justify-content: center;
+
+}
+
+/* add bg image, set size to cover the remplate areas we'll set later
+to center the text inside the div, we make div flex container, flex-flow to set flex-direction to column and flex-wrap to wrap.
+center using justify-content and align-items to center. */
+div.opener{
+  background-image: url("victoria.jpg");
+  background-size: cover;
+  background-position: center;
+  grid-area: opener;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.highlight-side1{
+  grid-area: hside-1;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc600;
+  width: 100%;
+}
+
+@media screen and (max-width: 430px){
+  h2{
+    font-size: 1.5rem;
+  }
+
+}
+
+.box{
+    background-color: #ffc600;
+}
+
+/* makes item flex element and centers items column wise with space around */
+.flex-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+div.highlight-side2{
+  grid-area: hside-2;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc600;
+  width: 100%;
+}
+/* feature section grid squares, create 4 columns with minimum 100px width that will be auto-fit (content size) if content is bigger than minimum . Added right-left padding to push the content away from sides, nearer middle*/
+section.features{
+  display:grid;
+  padding: 0px 5rem;
+  grid-template-columns: repeat(4,minmax(100px, auto));
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+img.featured-cake{
+  max-width: 100%;
+  height: 100%;
+  max-height: 270px;
+}
+
+ section.featured-item{
+  background-color: whitesmoke;
+  display:grid;
+  grid-template-columns: 40vw 40vw;
+  padding: 0px 5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+
+div.featured-text{
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.featured-text h2{
+  color: saddlebrown;
+  font-size: 4rem;
+}
+
+div.featured-text p{
+  color: saddlebrown;
+}
+
+ul.footer{
+  width: 100%;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.footer__item{
+  background-color: #ffc600;
+  padding: 1.3rem 3rem;
+  font-size: 1.2rem;
+  list-style-type: none;
+  color: darkslategrey;
+  font-weight: 700;
+  flex: 1 1 auto;
+}
+
+@media screen and (max-width: 812px){
+
+  ul.footer{
+    flex-flow: column wrap;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+      <nav>
+        <ul class="nav">
+          <li class="nav__item">Desserts</li>
+          <li class="nav__item">Snacks</li>
+          <li class="nav__item">Drinks</li>
+          <li class="nav__item">Events</li>
+        </ul>
+      </nav>
+    <section class=highlights>
+      <div class="opener">
+        <h2>Shile's Cakes</h2>
+        <p>Pretty good Cakes!</p>
+      </div>
+      <div class="highlight-side1 flex-center">
+        <h2>£1.99</h2>
+        <p>Red velvet</p>
+      </div>
+      <div class="highlight-side2 flex-center">
+        <h2>£2.40</h2>
+        <p>Cookies & Cream</p>
+      </div>
+    </section>
+    <section class="features">
+      <div class="cakes box flex-center">
+        <span>🎂</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, optio.</p>
+      </div>
+      <div class="cupcakes box flex-center">
+        <span>🧁 </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, officia!</p>
+      </div>
+      <div class="slices box flex-center">
+        <span>🍰</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, animi!</p>
+      </div>
+      <div class="milkshakes box flex-center">
+        <span>🥛</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, laudantium.</p>
+      </div>
+    </section>
+    <section class="featured-item">
+      <div class="featured-img">
+        <img class="featured-cake" src="carrot.png" alt="carrot cake">
+      </div>
+      <div class="featured-text">
+        <h2>Carrot cake</h2>
+        <p>A traditional favourite with a decadent cream cheese frosting.</p>
+        <button>Learn More &rarr;</button>
+      </div>
+    </section>
+    <footer>
+      <ul class="footer">
+        <li class="footer__item"> FAQ</li>
+        <li class="footer__item">Contact</li>
+        <li class="footer__item">Delivery</li>
+        <li class="footer__item">Stores</li>
+        <li class="footer__item">Careers</li>
+        <li class="footer__item">Stores</li>
+        <li class="footer__item">About Us</li>
+        <li class="footer__item">Nutrition </li>
+      </ul>
+    </footer>
+</body>
+</html>

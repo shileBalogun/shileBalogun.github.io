@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Richmond Park</title>
+  <link rel="stylesheet" href="styles/styles.css">
+<style>
+  
+/*Univeral reset of elements and pseudoelements*/
+   *,
+   *::before,
+   *::after{
+  font-family:helvetica, calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/*General styling */
+
+html{
+  font-size: 62.5%;
+}
+
+/* previously set rows to 100vh 20rem 20rem 20rem, this caused an issue where narrowing the screen caused the content in these rows to go onto the other grids/overlap. This is cause there wasn't enough space. I set the content rows to auto so the row sizes to match content. This made it more responsive. */
+section.container{
+  display: grid;
+  grid-template-rows: 100vh auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "landing landing landing"
+  "content-1 content-1 content-1"
+  "content-2 content-2 content-2"
+  "multi multi multi";
+}
+
+
+div.landing{
+  background-image: url("richmond.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: landing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  color: white;
+}
+
+div.landing h1{
+  font-size: 4rem;
+}
+
+div.landing p{
+  font-size: 1.2rem;
+  color: black;
+  align-self: center;
+  background-color: whitesmoke;
+}
+
+
+button{
+  background-color: transparent;
+  color: white;
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 5px;
+  transition: background-color 500ms ease,
+  color 500ms ease;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
+}
+
+div.content-1{
+grid-area: content-1;
+background-color: rosybrown;
+text-align: center;
+}
+
+div.content-2{
+  grid-area: content-2;
+  color: rgb(146, 98, 57);
+  text-align: center;
+}
+
+div.multi{
+  grid-area: multi;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.multi p{
+    padding:0.6rem;
+}
+/*select the even nth child of a p descended from div element with multi class*/
+div.multi p:nth-child(odd){
+  background-color: rosybrown;
+}
+
+</style>
+</head>
+<body>
+  <section class="container">
+    <div class="landing">
+      <h1>Welcome to Richmond Park</h1>
+      <p>Expansive walled park, originally a 17th-century hunting ground, still home to hundreds of deer.
+      </p>
+    </div>
+    <div class="content-1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam animi illo at quo vel id! Corporis dolor beatae porro quia, numquam debitis. Cum beatae praesentium atque officia ab ipsum sapiente veniam blanditiis voluptatum aperiam. Aperiam, magnam beatae. Repudiandae, totam debitis perspiciatis? Dolorum laboriosam numquam nostrum nisi repudiandae pariatur animi blanditiis recusandae eaque, possimus saepe dicta rem, obcaecati ea in debitis architecto nulla beatae itaque. Accusamus sapiente, ad ea iste sunt porro, magnam dignissimos, iusto asperiores iure ducimus autem excepturi pariatur neque aliquid ab rem magni distinctio corporis incidunt enim aperiam. Maiores alias suscipit nemo nostrum harum nesciunt tempore itaque dolores?</div>
+    <div class="content-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque inventore explicabo magni repudiandae a velit cumque repellat iusto nobis, quaerat, consectetur totam ut mollitia perspiciatis impedit unde excepturi dolorum illo. Voluptatem adipisci perspiciatis debitis soluta dolores architecto ut quidem dolor. Quis ipsum debitis id deserunt tenetur inventore et maxime dolorum, quod qui quidem officia minima deleniti facere recusandae at. Dolore voluptatem culpa quia aliquid numquam praesentium adipisci, similique distinctio, rem. Earum, similique distinctio. Hic enim expedita aspernatur et cupiditate amet veniam quaerat officia, laudantium alias! Itaque excepturi sint sequi nam illo omnis quasi esse? Rerum eveniet saepe reiciendis dolorem a!</div>
+    <div class="multi">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam reiciendis debitis officia dolor expedita asperiores molestiae quos modi labore praesentium sunt, aliquam minima possimus! Repellendus voluptates quos soluta provident dolores accusamus laborum veniam cumque officiis optio! Ab optio, sunt in!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam reiciendis debitis officia dolor expedita asperiores molestiae quos modi labore praesentium sunt, aliquam minima possimus! Repellendus voluptates quos soluta provident dolores accusamus laborum veniam cumque officiis optio! Ab optio, sunt in!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam reiciendis debitis officia dolor expedita asperiores molestiae quos modi labore praesentium sunt, aliquam minima possimus! Repellendus voluptates quos soluta provident dolores accusamus laborum veniam cumque officiis optio! Ab optio, sunt in!</p>
+    </div>
+  </section>
+
+
+
+</body>
+</html>
+

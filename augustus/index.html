@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Emperor Augustus</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    /*Univeral reset of elements and pseudoelements*/
+   *,
+   *::before,
+   *::after{
+  font-family:helvetica, calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/*General styling */
+
+html{
+  font-size: 62.5%;
+}
+
+/* create a navbar using flexbox */
+
+.nav{
+  width: 100vw;
+  height: 2.4vh;
+  display:flex;
+  justify-content:space-around;
+  list-style-type: none;
+  background-color:rgb(7,7,7);
+}
+
+.nav li > a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.8rem;
+  opacity: 0.7;
+  transition: opacity 300ms ease;
+}
+
+.nav li > a:hover{
+  opacity: 1;
+}
+
+.landing{
+  width: 100vw;
+  height: 80vh;
+  background-image: url("augustus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  position: relative;
+  color: whitesmoke;
+}
+
+.landing-header{
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  margin-top: 2%;
+}
+
+.summary{
+  display:flex;
+  width: 70vw;
+  height: auto;
+  text-align: justify;
+  padding:3rem;
+  background-color:rgba(178,178,178,0.8);
+  color:whitesmoke;
+  align-self: center;
+}
+
+section.timeline{
+  width:100vw;
+  background-image: url("augustus-bust.jpg");
+  background-size: cover;
+  background-position:left;
+  background-attachment: fixed;
+  display:flex;
+  flex-flow: column wrap;
+}
+.timeline-text{
+  width: 80vw;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background-color:rgba(178,178,178,0.5);
+  text-align: justify;
+  align-self: center;
+}
+
+.timeline-text > li{
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
+  list-style-position:inside;
+}
+
+h2.timeline-header{
+  display: inline-block;
+  height: 10vh;
+  font-size: 2rem;
+  color: black;
+  padding: 3rem;
+  align-self: center;
+}
+
+h1{
+  font-size: 4rem;
+  margin-bottom: 0.6rem;
+  border: solid 5px white;
+  letter-spacing: 0.3rem;
+}
+
+section.barrier{
+  height: 5vh;
+  background-color:rgb(7,7,7);
+  background-attachment: fixed;
+}
+
+p{
+  font-size: 1.5rem;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <section>
+    <ul class="nav">
+      <li><a href="#">Augustus</a></li>
+      <li><a href="#">Tiberius</a></li>
+      <li><a href="#">Caligula</a></li>
+      <li><a href="#">Claudius</a></li>
+      <li><a href="#">Nero</a></li>
+    </ul>
+  </section>
+  <section class="landing">
+    <div class="landing-header">
+      <h1> Augustus </h1>
+    </div>
+    <div class="summary">
+      <p>Caesar Augustus (23 September 63 BC – 19 August AD 14) was the first Roman emperor, reigning from 27 BC until his death in AD 14. His status as the founder of the Roman Principate has consolidated an enduring legacy as one of the most effective and controversial leaders in human history. The reign of Augustus initiated an era of relative peace known as the Pax Romana. The Roman world was largely free from large-scale conflict for more than two centuries, despite continuous wars of imperial expansion on the Empire's frontiers and the year-long civil war known as the "Year of the Four Emperors" over the imperial succession. </p>
+    </div>
+  </section>
+  <section class="barrier">
+
+  </section>
+  <section class="timeline">
+    <h2 class="timeline-header">Timeline of Augustus:</h2>
+    <ul class="timeline-text">
+      <li>63 BCE: Born September 23rd as Gaius Octavius, in Velletri,southeast of Rome. Son of Atia, daughter of Julia, the sister of Julius Caesar.</li>
+      <li>47 BCE: Octavius was made a member of the board of Roman priests, pontifices. His great uncle, Julius Caesar, became the chief priest, Pontifex Maximus.</li>
+      <li>46 BCE: Octavius accompanied Julius Caesar in the public precession celebrating the victory of Caesar over his opponents in Africa.</li>
+      <li>45 BCE: Octavius accompanied Caesar on his military expedition to Spain to defeat and destroy the sons of Pompey, his defeated rival, who were trying to perpetuate their father's opposition to Caesar.</li>
+      <li>44BCE: Octavius learns of the assassination of Julius Caesar. Octavius returned to Rome and found that Caesar's will makes him Caesar's adopted son and heir to his political and personal fortune. Octavius borrows funds to comply with Caesar's will and his efforts garnered public support for Octavius. His efforts to fulfill Caesar's will gain him considerable support among Caesar's troops. In response to Mark Antony defying the will of the senate, Octavius is made a senator and launches a campaign driving Antony out of Italy and into Gaul. He is officially recognised as the son of Julius Caesar and takes the name Gaius Julius Caesar (Octavianus)</li>
+      <li>43 BCE: Octavian and Antony agreed to a sharing of power. They, along with Lepidus who was the Pontifex Maximus, are designated by the Senate as a Triumvirate with dictatorial powers for five years. Octavian, Antony and Lepidus agreed to eliminate those Senators and members of the Roman aristocracy whom any one of the three considered a threat to public order. Altogether 300 senators and two thousand lesser level aristocrats are executed. Cicero, a supporter of Octavian, was designated for execution by Antony under this arrangement.</li>
+      <li>42 BCE: Antony and Octavian undertake a military expedition to the east to defeat Brutus and Cassius. In two battles at Philippi the troops of Brutus and Cassius are defeated and Brutus and Cassius kill themselves. The Triumvirate then divide up the Empire. Anthony receiving the eastern provinces and Gaul, Lepidus receiving Africa and Octavian gets the west except for Italy which was to be under common control of the three.</li>
+      <li>39 BCE: Julia, Octavian's daughter was born. A few days after her birth Octavian divorces her mother, Scribonia.</li>
+      <li>38 BCE: Octavian marries Livia Drusilla, a member of the Roman aristocracy. Livia Drusilla had only recently divorced her husband and was pregnant with her second son, leading to the presumption that a romantic relationship had already been in existence between Ocatavian and Livia and speculation that perhaps Octavian might have been the father of Livia's second son, Drusus. Her older son was Tiberius.</li>
+      <li>37 BCE: Octavian negotiates an arrangement with Antony in which Antony supplies Octavian with ships for Octavian's expedition against Sextus in Sicily in return for Octavian supplying troops to Antony for his proposed invasion of the Parthian empire in the east. The Triumvirate was renewed for another five years.</li>
+      <li>35-33 BCE: Octavian with Agrippa fights campaigns in the Balkan peninsula. The formal powers of the Triumvirate end in 33 BCE.</li>
+      <li>32 BCE: Antony divorces Octavia, Octavian's sister. Octavian reveals that Anthony's will calls for the granting of Roman territory in the east to the Cleopatra. Furthermore it reveals plans for transferring the capital of the empire from Rome to Alexandria. The sympathy and allegiance of the Roman public are with Octavian against Antony.</li>
+      <li>31 BCE: Antony decides to bring his forces to the western side of Greece. Cleopatra accompanies him. Octavian sends a military expedition under the command of Agrippa to challenge Antony's control of Greece. Octavian joins Agrippa and their fleet bottles up Antony and Cleopatra's fleet in the Gulf of Ambracia. A naval battle ensues at Actium in which Cleopatra, for fear of being captured, pulls her ships out of the battle and heads back to Egypt thus ensuring the defeat of Anthony's forces. Anthony and some of his ships escape from the battle and follow Cleopatra.</li>
+      <li>30 BCE: Octavian invades Egypt; Anthony commits suicide and Cleopatra follows suit in a tragic sequence of events. Cleopatra's son by Julius Caesar is sent into hiding on the Red Sea coast of Egypt but Octavian's men track him down and kill him. Octavian annexed Egypt into the Roman Empire and put it under his direct control.</li>
+      <li>28 BCE: A census of the Roman population was conducted. Octavian reduced the size of the Senate from 1000 members to 800. Octavian was appointed the president of the Senate. Although Octavian was all powerful he made a determined effort to cloth his rule in the semblance of republican traditions. Octavian was awarded the name "Augustus" and thereafter he was referred to as Caesar Augustus.</li>
+      <li>25 BCE: Tribes in the Alps were subdued. The Celtic kingdom in what is now central Turkey (Anatolia) was annexed into the Empire.</li>
+      <li>20 BCE: The empires of Rome and Parthia reached a peace agreement in which Parthia accepted the Armenia as being within the Roman sphere of influence.</li>
+      <li>12 BCE: Augustus becomes Pontifex Maximus, the chief priest of the Roman religion after Lepidus, who had been a member of the Triumvirate with Octavian and Mark Antony, dies.</li>
+      <li>14 BE: Augustus falls ill and dies on August 19th. On September 17th the Roman Senate designated him a god. Tiberius succedes Augustus as princeps (First Citizen). Neither held the title of emperor, but were, in effect, the first and second emperors of the Roman Empire.</li>
+    </ul>
+  </section>
+
+
+</body>
+</html>
+
